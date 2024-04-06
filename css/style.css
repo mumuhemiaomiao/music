@@ -1,0 +1,100 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	list-style: none;
+}
+body,html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	background: url('../images/music.jpeg') no-repeat center center rgb(255,216,242);
+	background-size: auto 100%;
+	overflow: hidden;
+}
+ul {
+	position: relative;
+	-ms-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-webkit-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	width: 200px;
+	height: 200px;
+	margin: 100px auto;
+	cursor: pointer;
+/* 	鼠标移入增加小手的效果 */
+	animation:show 6s infinite linear;
+	
+}
+.current{
+	/* 使用动画 ：动画名字  动画持续 是否循环(不加此属性，默认只执行一次) 平缓变化*/
+	
+	animation-play-state: paused;
+}
+/* 定义动画：书写各个状态的样式条 */
+@keyframes show{
+	0%{
+		transform:rotateX(0deg) rotateY(0deg)
+	}
+	100%{
+		transform:rotateX(360deg) rotateY(360deg)
+	}
+}
+ul li {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 200px;
+	height: 200px;
+	background: url(../images/pic01.png);
+}
+ul li:nth-of-type(1) {
+	background: url(../images/pic01.png);
+	-ms-transform: rotateY(90deg) translateZ(100px);
+	-moz-transform: rotateY(90deg) translateZ(100px);
+	-webkit-transform: rotateY(90deg) translateZ(100px);
+	-o-transform: rotateY(90deg) translateZ(100px);
+	transform: rotateY(90deg) translateZ(100px);
+}
+ul li:nth-of-type(2) {
+	background: url(../images/pic02.png);
+	-ms-transform: rotateY(-90deg) translateZ(100px);
+	-moz-transform: rotateY(-90deg) translateZ(100px);
+	-webkit-transform: rotateY(-90deg) translateZ(100px);
+	-o-transform: rotateY(-90deg) translateZ(100px);
+	transform: rotateY(-90deg) translateZ(100px);
+}
+ul li:nth-of-type(3) {
+	background: url(../images/pic03.png);
+	-ms-transform: rotateX(90deg) translateZ(100px);
+	-moz-transform: rotateX(90deg) translateZ(100px);
+	-webkit-transform: rotateX(90deg) translateZ(100px);
+	-o-transform: rotateX(90deg) translateZ(100px);
+	transform: rotateX(90deg) translateZ(100px);
+}
+ul li:nth-of-type(4) {
+	background: url(../images/pic04.png);
+	-ms-transform: rotateX(-90deg) translateZ(100px);
+	-moz-transform: rotateX(-90deg) translateZ(100px);
+	-webkit-transform: rotateX(-90deg) translateZ(100px);
+	-o-transform: rotateX(-90deg) translateZ(100px);
+	transform: rotateX(-90deg) translateZ(100px);
+}
+ul li:nth-of-type(5) {
+	background: url(../images/pic05.png);
+	-ms-transform: translateZ(100px);
+	-moz-transform: translateZ(100px);
+	-webkit-transform: translateZ(100px);
+	-o-transform: translateZ(100px);
+	transform: translateZ(100px);
+}
+ul li:nth-of-type(6) {
+	background: url(../images/pic06.png);
+	
+	transform:rotateX(180deg) translateZ(100px);
+}
+h1 {
+	text-align: center;
+}
